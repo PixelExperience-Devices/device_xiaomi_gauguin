@@ -21,4 +21,6 @@
     -->
     <integer name="config_fingerprintSensorLocation">3</integer>
 
+    <!-- Whether to show a preference item for mobile plan -->
+    <bool name="config_show_mobile_plan">false</bool>
 </resources>
