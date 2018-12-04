@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.media_vol_steps=25
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.bt.a2dp.aac_whitelist=false \
