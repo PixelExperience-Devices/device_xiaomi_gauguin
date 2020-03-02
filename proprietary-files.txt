@@ -1,3 +1,9 @@
+# ANT+
+-lib/libantradio.so
+-lib64/libantradio.so
+product/lib/com.qualcomm.qti.ant@1.0.so
+product/lib64/com.qualcomm.qti.ant@1.0.so
+
 # CNE
 etc/cne/Nexus/ATT/ATT_profiles.xml
 etc/cne/Nexus/ROW/ROW_profiles.xml
