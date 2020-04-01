@@ -45,10 +45,10 @@ AB_OTA_UPDATER := false
 
 # Device Settings
 PRODUCT_PACKAGES += \
-    DeviceSettings
+    XiaomiParts
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/devicesettings/privapp-permissions-devicesettings.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-devicesettings.xml
+    $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-parts.xml
 
 # fastbootd
 PRODUCT_PACKAGES += \

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.lineageos.settings;
 
 import android.os.Bundle;
 import android.provider.Settings;
