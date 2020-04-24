@@ -166,3 +166,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# WiFi
+PRODUCT_PACKAGES += \
+    WifiOverlay
