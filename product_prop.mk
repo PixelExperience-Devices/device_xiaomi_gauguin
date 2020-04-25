@@ -17,6 +17,10 @@ endif
 PRODUCT_PRODUCT_PROPERTIES += \
     vendor.camera.aux.packagelist=org.lineageos.snap,net.sourceforge.opencamera,org.codeaurora.snapcam
 
+# Dex2oat
+PRODUCT_PRODUCT_PROPERTIES += \
+    dalvik.vm.dex2oat64.enabled=true
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=1 \
