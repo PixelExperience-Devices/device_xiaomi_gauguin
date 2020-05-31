@@ -27,6 +27,15 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    libaacwrapper
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothQti
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
@@ -85,6 +94,9 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service.gauguin
+
+# Properties
+-include $(LOCAL_PATH)/system_prop.mk
 
 # Telephony
 PRODUCT_PACKAGES += \
