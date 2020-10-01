@@ -160,6 +160,10 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Soong
 PRODUCT_BOARD_PLATFORM := lito
 PRODUCT_USES_QCOM_HARDWARE := true
