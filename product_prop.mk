@@ -16,6 +16,7 @@ endif
 # Camera
 PRODUCT_PRODUCT_PROPERTIES += \
     vendor.camera.aux.packagelist=org.lineageos.snap,net.sourceforge.opencamera,org.codeaurora.snapcam
+    media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # Dex2oat
 PRODUCT_PRODUCT_PROPERTIES += \
