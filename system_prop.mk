@@ -42,3 +42,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PRODUCTY_OVERRIDES += \
     ro.telephony.default_network=33,22
 
+# Vulkan
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwui.renderer=skiavk
