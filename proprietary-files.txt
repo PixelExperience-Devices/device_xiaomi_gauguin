@@ -23,6 +23,9 @@ product/lib64/lib-imsvtutils.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
 
+# Power-off charging daemon
+bin/charger
+
 # Telephony
 etc/permissions/privapp-permissions-qti.xml
 etc/permissions/qti_libpermissions.xml
