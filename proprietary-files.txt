@@ -21,5 +21,5 @@ product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/etc/permissions/telephonyservice.xml
 product/framework/qcrilhook.jar
 product/framework/QtiTelephonyServicelibrary.jar
-product/framework/qti-telephony-common.jar
+product/framework/qti-telephony-common.jar|d53c26a3df5ae5d3218caca05a89dcbaa9a1810f
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
