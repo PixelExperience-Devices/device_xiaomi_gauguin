@@ -23,6 +23,12 @@ product/lib64/lib-imsvtutils.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
 
+# Perf
+product/lib64/vendor.qti.hardware.iop@2.0.so
+product/lib64/vendor.qti.hardware.perf@2.0.so
+product/lib/vendor.qti.hardware.iop@2.0.so
+product/lib/vendor.qti.hardware.perf@2.0.so
+
 # Power-off charging daemon
 bin/charger
 
