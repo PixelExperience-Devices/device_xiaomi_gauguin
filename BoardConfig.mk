@@ -52,6 +52,10 @@ TARGET_ENABLE_MEDIADRM_64 := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
+# FM
+BOARD_HAS_QCA_FM_SOC := "cherokee"
+BOARD_HAVE_QCOM_FM := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_gauguin
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/

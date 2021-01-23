@@ -11,6 +11,14 @@ product/lib64/vendor.qti.hardware.data.connection@1.1.so
 product/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 product/lib64/vendor.qti.hardware.data.iwlan@1.0.so
 
+# FM
+lib64/fm_helium.so
+lib64/libfm-hci.so
+lib/fm_helium.so
+lib/libfm-hci.so
+product/lib64/vendor.qti.hardware.fm@1.0.so
+product/lib/vendor.qti.hardware.fm@1.0.so
+
 # IMS
 -product/priv-app/ims/ims.apk
 product/lib64/libdiag_system.so
