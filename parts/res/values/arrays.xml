@@ -14,10 +14,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="device_refresh_rates">
         <item>60 Hz</item>
+        <item>90 Hz</item>
         <item>120 Hz</item>
     </string-array>
     <string-array name="device_refresh_rates_val">
-        <item>60</item>
-        <item>120</item>
+        <item>5</item>
+        <item>2</item>
+        <item>4</item>
     </string-array>
 </resources>
