@@ -27,6 +27,9 @@ TARGET_USES_64_BIT_BINDER := true
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := gauguin,gauguininpro,gauguinpro
+
 # Audio
 AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
 AUDIO_FEATURE_ENABLED_EXTN_FORMATS := true
