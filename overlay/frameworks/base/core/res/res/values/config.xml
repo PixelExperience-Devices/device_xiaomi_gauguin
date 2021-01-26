@@ -24,12 +24,37 @@
     <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
     <!-- Whether camera shutter sound is forced or not  (country specific). -->
     <bool name="config_camera_sound_forced">false</bool>
+        <!-- Allow the gesture to double tap the power button twice to start the camera while the device
+         is non-interactive. -->
+    <bool name="config_cameraDoubleTapPowerGestureEnabled">false</bool>
     <!-- Flag specifying whether VoLTE should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
     <bool name="config_carrier_volte_available">true</bool>
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
+     <!-- Default files to pin via Pinner Service -->
+   <string-array name="config_defaultPinnerServiceFiles">
+        <item>/data/dalvik-cache/arm64/system@framework@boot.oat</item>
+        <item>/data/dalvik-cache/arm/system@framework@boot.oat</item>
+        <item>/data/dalvik-cache/arm64/system@framework@services.jar@classes.dex</item>
+        <item>/data/dalvik-cache/arm/system@framework@services.jar@classes.dex</item>
+        <item>/system/framework/arm64/boot.oat</item>
+        <item>/system/framework/arm/boot.oat</item>
+        <item>/system/framework/oat/arm64/services.odex</item>
+        <item>/system/framework/oat/arm/services.odex</item>
+        <item>/system/framework/arm64/boot-framework.oat</item>
+        <item>/system/framework/arm/boot-framework.oat</item>
+        <item>/system/framework/arm64/boot-core-libart.oat</item>
+        <item>/system/framework/arm/boot-core-libart.oat</item>
+        <item>/system/lib64/libRScpp.so</item>
+        <item>/system/lib64/libRS.so</item>
+        <item>/system/lib64/libRS_internal.so</item>
+        <item>/system/lib64/libbcinfo.so</item>
+        <item>/system/lib64/libRSDriver.so</item>
+        <item>/system/lib64/libRSCpuRef.so</item>
+        <item>/system/lib64/libblas.so</item>
+    </string-array>
     <!-- Flag specifying whether VoLTE is available on device -->
     <bool name="config_device_volte_available">true</bool>
     <!-- Flag specifying whether VT is available on device -->
@@ -144,6 +169,8 @@
     <!-- ImsService package name to bind to by default. If none is specified in an overlay, an
          empty string is passed in -->
     <string name="config_ims_package">org.codeaurora.ims</string>
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
     <!-- MMS user agent string -->
     <string name="config_mms_user_agent">Android-Mms/2.0</string>
     <!-- MMS user agent prolfile url -->
