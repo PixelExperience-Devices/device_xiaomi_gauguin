@@ -86,6 +86,9 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_gauguin
 TARGET_RECOVERY_DEVICE_MODULES := libinit_gauguin
 
+# Input
+TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY := 102
+
 # Media
 TARGET_USES_ION := true
 
