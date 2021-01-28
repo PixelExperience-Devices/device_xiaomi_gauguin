@@ -344,8 +344,9 @@
         <item>335</item>
         <item>407</item>
         <item>472</item>
-        <item>536</item>
-        <item>550</item>
+        <item>500</item>
+        <item>530</item>
+        <item>530</item>
     </integer-array>
     <!-- Array of output values for LCD backlight corresponding to the lux values
          in the config_autoBrightnessLevels array.  This array should have size one greater
@@ -429,6 +430,7 @@
          backlight values for lux levels between these control points.
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
+        <item>1</item>
         <item>2</item>
         <item>4</item>
         <item>6</item>
@@ -484,6 +486,7 @@
         <item>3000</item>
         <item>3500</item>
         <item>4000</item>
+        <item>4500</item>
     </integer-array>
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
          percent. The length of this array is assumed to be one greater than
