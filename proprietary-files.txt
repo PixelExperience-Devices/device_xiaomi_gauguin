@@ -1,3 +1,6 @@
+# Alarm
+-product/app/PowerOffAlarm/PowerOffAlarm.apk
+
 # ANT+
 -lib/libantradio.so
 -lib64/libantradio.so
