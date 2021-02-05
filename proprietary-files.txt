@@ -54,7 +54,7 @@ product/lib/vendor.qti.hardware.fm@1.0.so
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED
 
 # IMS
--product/priv-app/ims/ims.apk
+-product/priv-app/ims/ims.apk|a83f012cd4b28b7122d5d249bc741f508650c5ea
 product/lib64/libdiag_system.so
 product/lib64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so
