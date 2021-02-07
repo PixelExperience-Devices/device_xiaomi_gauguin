@@ -24,9 +24,6 @@ TARGET_2ND_CPU_VARIANT := generic
 
 TARGET_USES_64_BIT_BINDER := true
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
-
 # Assert
 TARGET_OTA_ASSERT_DEVICE := gauguin,gauguininpro,gauguinpro
 
