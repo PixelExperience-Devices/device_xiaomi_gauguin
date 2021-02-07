@@ -613,4 +613,7 @@
           manually by the user. Off by default, since the expected haptic feedback may not be
           available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
+
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">90</integer>
 </resources>
