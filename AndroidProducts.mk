@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_gauguin.mk
+    $(LOCAL_DIR)/dot_gauguin.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_gauguin-user \
-    lineage_gauguin-userdebug \
-    lineage_gauguin-eng
+    dot_gauguin-user \
+    dot_gauguin-userdebug \
+    dot_gauguin-eng
