@@ -30,6 +30,7 @@
 #define LOG_TAG "QTI PowerHAL"
 
 #include <android/log.h>
+#include <linux/input.h>
 #include <utils/Log.h>
 #include "Power.h"
 #include "power-common.h"
@@ -48,9 +49,11 @@ using ::android::hardware::power::V1_1::PowerStateSubsystem;
 using ::android::hardware::hidl_vec;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
+sp<ITouchFeature> TouchFeatureService;
 
 Power::Power() {
     power_init();
+    TouchFeatureService = ITouchFeature::getService();
 }
 
 Return<void> Power::setInteractive(bool interactive) {
@@ -64,7 +67,18 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
     return Void();
 }
 
+void set_feature(feature_t feature, int state) {
+    switch (feature) {
+        case POWER_FEATURE_DOUBLE_TAP_TO_WAKE: {
+            TouchFeatureService->setTouchMode(14, state ? 1 : 0);
+        } break;
+        default:
+            break;
+    }
+}
+
 Return<void> Power::setFeature(Feature feature, bool activate)  {
+    set_feature(static_cast<feature_t>(feature), activate ? 1 : 0);
     return Void();
 }
 

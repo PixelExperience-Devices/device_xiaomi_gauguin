@@ -34,6 +34,7 @@
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
 #include <hardware/power.h>
+#include <vendor/xiaomi/hardware/touchfeature/1.0/ITouchFeature.h>
 
 namespace android {
 namespace hardware {
@@ -47,6 +48,7 @@ using PowerHint_1_2 = ::android::hardware::power::V1_2::PowerHint;
 using ::android::hardware::power::V1_2::IPower;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
+using ::vendor::xiaomi::hardware::touchfeature::V1_0::ITouchFeature;
 
 struct Power : public IPower {
     // Methods from ::android::hardware::power::V1_0::IPower follow.
