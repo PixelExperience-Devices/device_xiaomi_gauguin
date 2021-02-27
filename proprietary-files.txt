@@ -44,8 +44,8 @@ product/lib64/vendor.qti.hardware.perf@2.0.so
 product/lib/vendor.qti.hardware.iop@2.0.so
 product/lib/vendor.qti.hardware.perf@2.0.so
 
-# Power-off charging daemon
-bin/charger
+# Power-off charging daemon - gauguin - RKQ1.200826.002-V12.0.2.0.RJSMIXM
+bin/charger|a046a99a0a3789cb9c7d685c3a16451d7e3767ef
 
 # Soundfx - from LA.UM.8.9.r1-08400-SM6xx.0
 vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib/soundfx/libvolumelistener.so:|672ad577dab5221bdd7f840d87313e3483aebde0
