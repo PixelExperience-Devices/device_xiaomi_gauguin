@@ -1,5 +1,5 @@
-<manifest version="1.0" type="device" target-level="1">
-    <hal format="hidl">
+<manifest version="1.0" type="framework">
+    <hal format="hidl" override="true">
         <name>android.hardware.light</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -7,5 +7,6 @@
             <name>ILight</name>
             <instance>default</instance>
         </interface>
+        <fqname>@2.0::ILight/default</fqname>
     </hal>
 </manifest>

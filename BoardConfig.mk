@@ -67,9 +67,6 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
 
-# HIDI
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_gauguin
 TARGET_RECOVERY_DEVICE_MODULES := libinit_gauguin
@@ -157,6 +154,9 @@ BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+
+# VINTF
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/gauguin/BoardConfigVendor.mk

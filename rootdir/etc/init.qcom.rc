@@ -1,0 +1,9 @@
+on post-fs-data
+
+service vendor.light-qti /vendor/bin/hw/android.hardware.lights-service.qti
+    class hal
+    user system
+    group system
+    shutdown critical
+    disabled
+    override
