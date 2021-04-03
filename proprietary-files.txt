@@ -10,18 +10,6 @@ system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8350.so
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 
-# CNE
-product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
-product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
--system_ext/framework/vendor.qti.hardware.data.connection-V1.0-java.jar
--system_ext/framework/vendor.qti.hardware.data.connection-V1.1-java.jar
--system_ext/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar
--system_ext/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar
-system_ext/lib/vendor.qti.hardware.data.connection@1.0.so
-system_ext/lib/vendor.qti.hardware.data.connection@1.1.so
-system_ext/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
-system_ext/lib/vendor.qti.hardware.data.iwlan@1.0.so
-
 # FM
 system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
