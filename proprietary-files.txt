@@ -10,6 +10,10 @@ system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8350.so
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 
+# DRM
+vendor/lib/liboemcrypto.so:product/vendor_overlay/30/lib/liboemcrypto.so
+vendor/lib64/liboemcrypto.so:product/vendor_overlay/30/lib64/liboemcrypto.so
+
 # FM
 system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
