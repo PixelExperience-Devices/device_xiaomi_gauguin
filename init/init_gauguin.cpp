@@ -49,6 +49,8 @@ void load_gauguinpro() {
     property_override("ro.build.product", "gauguinpro");
     property_override("ro.product.device", "gauguinpro");
     property_override("ro.product.marketname", "Redmi Note 9 Pro");}
+    property_override("ro.product.brand", "Redmi");
+}
 
 
 void vendor_load_properties() {
