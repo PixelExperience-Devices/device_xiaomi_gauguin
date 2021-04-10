@@ -1,0 +1,11 @@
+type vendor_hal_citsensorservice_xiaomi_default, domain;
+
+# Allow vendor_hal_citsensorservice_xiaomi_default to get sensors_prop
+get_prop(vendor_hal_citsensorservice_xiaomi_default, sensors_prop)
+
+# Allow to use wakelock
+wakelock_use(vendor_hal_citsensorservice_xiaomi_default)
+
+allow vendor_hal_citsensorservice_xiaomi_default ion_device:chr_file { read open ioctl };
+
+dontaudit vendor_hal_citsensorservice_xiaomi_default vendor_diag_device:chr_file rw_file_perms;

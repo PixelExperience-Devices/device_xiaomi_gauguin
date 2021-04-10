@@ -1,0 +1,4 @@
+type batteryd, domain;
+type batterysecret, domain;
+allow batteryd kmsg_device:chr_file r_file_perms;
+allow batterysecret kmsg_device:chr_file r_file_perms;

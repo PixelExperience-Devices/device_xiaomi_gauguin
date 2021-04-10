@@ -1,0 +1,2 @@
+allow permissioncontroller_app perfshielder:service_manager find;
+allow permissioncontroller_app tethering_service:service_manager find;

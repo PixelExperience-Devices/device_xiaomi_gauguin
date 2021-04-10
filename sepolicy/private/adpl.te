@@ -1,0 +1,2 @@
+type vendor_adpl, domain;
+dontaudit vendor_adpl vendor_diag_device:chr_file rw_file_perms;

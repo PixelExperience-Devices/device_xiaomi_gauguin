@@ -1,0 +1,12 @@
+allow hal_camera vendor_hal_qspmhal_hwservice:hwservice_manager find;
+
+allow hal_camera toolbox_exec:file r_file_perms;
+allow hal_camera toolbox_exec:file execute_no_trans;
+allow hal_camera toolbox_exec:file execute;
+
+allow hal_camera proc_stat:file r_file_perms;
+allow hal_camera vendor_shell_exec:file { read execute_no_trans };
+allow hal_camera vendor_sysfs_kgsl:file { getattr open read execute_no_trans };
+
+# allow hal_camera to get vendor_persist_camera_prop
+get_prop(hal_camera, vendor_persist_camera_prop);

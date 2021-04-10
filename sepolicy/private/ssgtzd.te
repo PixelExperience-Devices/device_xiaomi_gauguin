@@ -1,0 +1,2 @@
+type vendor_ssgtzd, domain;
+dontaudit vendor_ssgtzd vendor_data_file:dir setattr;

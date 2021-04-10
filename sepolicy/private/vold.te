@@ -1,0 +1,1 @@
+allow vold sysfs_memory:file rw_file_perms;

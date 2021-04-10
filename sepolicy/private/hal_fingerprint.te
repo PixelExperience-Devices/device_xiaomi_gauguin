@@ -1,0 +1,1 @@
+allow hal_fingerprint rootfs:dir r_dir_perms;

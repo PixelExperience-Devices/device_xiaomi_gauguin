@@ -1,0 +1,1 @@
+dontaudit hal_graphics_composer vendor_diag_device:chr_file rw_file_perms;

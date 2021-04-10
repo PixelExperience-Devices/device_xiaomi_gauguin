@@ -1,0 +1,3 @@
+# Allow hal_health to do whatever battery verification it wants
+allow hal_health sysfs_battery_supply:dir r_dir_perms;
+allow hal_health sysfs_battery_supply:file r_file_perms;

@@ -1,0 +1,6 @@
+# HwBinder IPC from client to server
+binder_call(hal_mlipay_client, hal_mlipay_server)
+
+hal_attribute_hwservice(hal_mlipay, hal_mlipay_hwservice)
+set_prop(hal_mlipay_default, vendor_payment_security_prop)
+set_prop(hal_mlipay_default, vendor_tee_listener_prop)

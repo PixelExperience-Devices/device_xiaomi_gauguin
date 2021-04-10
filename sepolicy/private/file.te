@@ -1,0 +1,27 @@
+# data
+type display_data_file, data_file_type, core_data_file_type, file_type;
+
+# firmware
+type adsprpcd_file, file_type;
+type bt_firmware_file, file_type;
+type firmware_file, file_type;
+type persist_file, file_type;
+
+# sysfs
+type sysfs_battery_supply, sysfs_type, fs_type;
+type sysfs_device_info, sysfs_type, fs_type;
+type sysfs_graphics, sysfs_type, fs_type;
+type sysfs_kgsl, sysfs_type, fs_type;
+type sysfs_memory, sysfs_type, fs_type;
+type sysfs_usb_supply, sysfs_type, fs_type;
+
+# vendor
+type vendor_capabilityconfigstore_data_file, file_type, data_file_type;
+type vendor_debugfs_ipc, debugfs_type, fs_type;
+type vendor_diag_device, dev_type;
+type vendor_pps_socket, file_type;
+type vendor_sysfs_devfreq, sysfs_type, fs_type;
+type vendor_sysfs_graphics, sysfs_type, fs_type;
+type vendor_sysfs_kgsl, sysfs_type, fs_type;
+type vendor_sysfs_msm_subsys, sysfs_type, fs_type;
+type vendor_sysfs_scsi_host, sysfs_type, fs_type;

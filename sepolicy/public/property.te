@@ -1,0 +1,13 @@
+type sensors_prop, property_type;
+type vendor_adsprpc_prop, property_type;
+type vendor_cap_configstore_dbg_prop, property_type;
+type vendor_cnd_prop, property_type;
+type vendor_cp_taper_term_mv_prop, property_type;
+type vendor_display_prop, property_type;
+type vendor_displayfeature_prop, property_type;
+type vendor_fp_prop, property_type;
+type vendor_payment_security_prop, property_type;
+type vendor_pd_locater_dbg_prop, property_type;
+type vendor_power_prop, property_type;
+type vendor_sensors_prop, property_type;
+type vendor_tee_listener_prop, property_type;

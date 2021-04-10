@@ -1,0 +1,2 @@
+type vendor_hal_gnss_qti, domain;
+get_prop(vendor_hal_gnss_qti, vendor_pd_locater_dbg_prop)

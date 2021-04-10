@@ -1,0 +1,2 @@
+allow tee persist_file:lnk_file read;
+allow tee tmpfs:dir { open read };

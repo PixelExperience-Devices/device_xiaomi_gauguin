@@ -1,0 +1,17 @@
+typeattribute vendor_init data_between_core_and_vendor_violators;
+
+# Allow vendor_init to check encryption status of system_data_file
+allow vendor_init system_data_file:dir create_dir_perms;
+
+allow vendor_init block_device:lnk_file setattr;
+allow vendor_init persist_file:lnk_file read;
+
+get_prop(vendor_init, default_prop)
+get_prop(vendor_init, persist_debug_prop)
+get_prop(vendor_init, vendor_persist_camera_prop);
+
+set_prop(vendor_init, exported_secure_prop)
+set_prop(vendor_init, exported3_system_prop);
+set_prop(vendor_init, vendor_cnd_prop)
+set_prop(vendor_init, vendor_cp_taper_term_mv_prop)
+set_prop(vendor_init, vendor_persist_camera_prop)
