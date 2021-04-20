@@ -149,6 +149,10 @@ PRODUCT_COPY_FILES += \
 -include $(LOCAL_PATH)/product_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.gauguin
+
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_USES_RECOVERY_AS_BOOT := false
