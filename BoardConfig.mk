@@ -67,6 +67,9 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
 
+# HIDI
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_gauguin
 TARGET_RECOVERY_DEVICE_MODULES := libinit_gauguin
