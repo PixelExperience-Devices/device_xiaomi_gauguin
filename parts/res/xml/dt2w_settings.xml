@@ -19,6 +19,6 @@
     <SwitchPreference
         android:defaultValue="true"
         android:key="dt2w_enable"
-        android:summary="@string/dt2w_enable_summary"
-        android:title="@string/dt2w_enable_title" />
+        android:summary="@string/tap_to_wake_summary"
+        android:title="@string/tap_to_wake" />
 </PreferenceScreen>
