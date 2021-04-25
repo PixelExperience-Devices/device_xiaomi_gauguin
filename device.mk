@@ -164,6 +164,10 @@ TARGET_USES_MKE2FS := true
 PRODUCT_BOARD_PLATFORM := lito
 PRODUCT_USES_QCOM_HARDWARE := true
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
