@@ -1,3 +1,5 @@
+# All unpinned blobs below are extracted from gauguin-user 11 RKQ1.200826.002 V12.0.2.0.RJSCNXM
+
 # ADSP Modules
 system_ext/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
 system_ext/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
@@ -7,12 +9,23 @@ system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8150.so
 system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8250.so
 system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8350.so
 
+# Alexa - from V12.0.1.0.RJSINXM
+vendor/etc/qvaconfig.xml:product/vendor_overlay/30/etc/qvaconfig.xml|8b2f61bdb8dae4cdccc1d2a498553d504e114908
+
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 
-# DRM
-vendor/lib/liboemcrypto.so:product/vendor_overlay/30/lib/liboemcrypto.so
-vendor/lib64/liboemcrypto.so:product/vendor_overlay/30/lib64/liboemcrypto.so
+# Camera - from V12.0.2.0.RJSMIXM
+vendor/lib/camera/com.qti.sensormodule.sunny_imx682.bin:product/vendor_overlay/30/lib/camera/com.qti.sensormodule.sunny_imx682.bin|8c24261a16ace9652cbfa56cc0662fc49e015017
+vendor/lib/camera/com.qti.tuned.gauguin_sunny_imx682_wide.bin:product/vendor_overlay/30/lib/camera/com.qti.tuned.gauguin_sunny_imx682_wide.bin|2e678e9ebaa8f1b7f0ba75e438bc11dd4cbe0f65
+vendor/lib64/camera/com.qti.sensormodule.sunny_imx682.bin:product/vendor_overlay/30/lib64/camera/com.qti.sensormodule.sunny_imx682.bin|8c24261a16ace9652cbfa56cc0662fc49e015017
+vendor/lib64/camera/com.qti.tuned.gauguin_sunny_imx682_wide.bin:product/vendor_overlay/30/lib64/camera/com.qti.tuned.gauguin_sunny_imx682_wide.bin|2e678e9ebaa8f1b7f0ba75e438bc11dd4cbe0f65
+
+# DRM - from from V12.0.2.0.RJSMIXM
+vendor/lib/liboemcrypto.so:product/vendor_overlay/30/lib/liboemcrypto.so|2c1525754f661b20bd83a9cd4ca6b56d78d88476
+vendor/lib64/liboemcrypto.so:product/vendor_overlay/30/lib64/liboemcrypto.so|6967571dfa2de7f4d73731ab0879245361827831
+vendor/lib/libwvkeybox.so:product/vendor_overlay/30/lib/libwvkeybox.so|1d30d25fa4a9ec8c9f2bd41147da45724dbcf7de
+vendor/lib64/libwvkeybox.so:product/vendor_overlay/30/lib64/libwvkeybox.so|8898c5a7bc366bf378804e9aba3245aeacdedfd5
 
 # FM
 system_ext/lib64/fm_helium.so
@@ -22,11 +35,11 @@ system_ext/lib/libfm-hci.so
 system_ext/lib64/vendor.qti.hardware.fm@1.0.so
 system_ext/lib/vendor.qti.hardware.fm@1.0.so
 
-# HotwordEnrollment
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
+# HotwordEnrollment - from V12.0.2.0.RJSMIXM
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|179246aed7e4df0a0506d524f3e80040bf77134e
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|b76f697c5ca97da3c5dcbe35df029ec7f3ff5766
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
+system_ext/framework/com.android.hotwordenrollment.common.util.jar|0492cd3db2e253e23b78e56fa8ea7b3a4b15edeb
 
 # IMS
 -system_ext/priv-app/ims/ims.apk
@@ -44,6 +57,9 @@ system_ext/lib/vendor.qti.hardware.iop@2.0.so
 system_ext/lib64/vendor.qti.hardware.iop@2.0.so
 system_ext/lib/vendor.qti.hardware.perf@2.0.so
 system_ext/lib64/vendor.qti.hardware.perf@2.0.so
+
+# Permissions - from V12.0.2.0.RJSMIXM
+vendor/etc/permissions/com.google.android.feature.PREMIER_TIER.xml:product/vendor_overlay/30/etc/permissions/com.google.android.feature.PREMIER_TIER.xml|0d00ca7050825759ba1f6ad7d3f029f08955b83a
 
 # Power-off charging daemon
 bin/charger
@@ -69,3 +85,4 @@ system_ext/etc/permissions/telephonyservice.xml
 -system_ext/framework/qcrilhook.jar
 -system_ext/framework/qti-telephony-common.jar
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+
