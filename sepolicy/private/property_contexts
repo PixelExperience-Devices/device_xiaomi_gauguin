@@ -12,10 +12,7 @@ ro.product.system.manufacturer u:object_r:exported2_default_prop:s0 exact string
 
 persist.sensor.                u:object_r:sensors_prop:s0
 
-persist.rild.nitz_         u:object_r:vendor_default_prop:s0
-ril.subscription.		u:object_r:vendor_default_prop:s0
-rild.libpath                        u:object_r:vendor_default_prop:s0
-
 persist.camera.                u:object_r:vendor_persist_camera_prop:s0
 vendor.camera.                 u:object_r:vendor_persist_camera_prop:s0
-vendor.powerhal.               u:object_r:vendor_power_prop:s0
+
+vendor.sys.thermal.                u:object_r:thermal_normal_prop:s0
