@@ -21,8 +21,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=440 \
-    persist.debug.wfd.enable=0
+    ro.sf.lcd_density=440
 
 # Enable blurs, hidden under dev option
 PRODUCT_PRODUCT_PROPERTIES += \

@@ -187,7 +187,12 @@ PRODUCT_PACKAGES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl
+    libdisplayconfig.qti \
+    libnl \
+    libqdMetaData \
+    libavservices_minijail \
+    libavservices_minijail_32 \
+    vendor.display.config@2.0
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
