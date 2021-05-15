@@ -25,7 +25,6 @@ import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
-import org.lineageos.settings.utils.RefreshRateUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -38,9 +37,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        // Refresh rate
-        RefreshRateUtils.setFPS(RefreshRateUtils.getRefreshRate(context));
-
         // Doze
         DiracUtils.initialize(context);
         DozeUtils.checkDozeService(context);
