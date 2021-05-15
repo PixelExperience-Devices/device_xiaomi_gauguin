@@ -23,7 +23,6 @@
     <!-- Global configuration Decalaration -->
     <globalConfiguration speaker_drc_enabled="true" call_screen_mode_supported="true"/>
 
-
     <!-- Modules section:
         There is one section per audio HW module present on the platform.
         Each module section will contains two mandatory tags for audio HAL “halVersion” and “name”.
@@ -60,17 +59,17 @@
             <defaultOutputDevice>Speaker</defaultOutputDevice>
             <mixPorts>
                 <mixPort name="primary output" role="source" flags="AUDIO_OUTPUT_FLAG_FAST|AUDIO_OUTPUT_FLAG_PRIMARY">
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
                 <mixPort name="raw" role="source"
-                        flags="AUDIO_OUTPUT_FLAG_FAST|AUDIO_OUTPUT_FLAG_RAW">
+                        flags="AUDIO_OUTPUT_FLAG_FAST">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
                 <mixPort name="deep_buffer" role="source"
                         flags="AUDIO_OUTPUT_FLAG_DEEP_BUFFER">
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
                 <mixPort name="mmap_no_irq_out" role="source" flags="AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_MMAP_NOIRQ">
@@ -167,17 +166,12 @@
                              samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK"/>
                 </mixPort>
-                <mixPort name="uplink downlink input" role="sink" flags="AUDIO_INPUT_FLAG_INCALL_UPLINK_DOWNLINK">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK"/>
-                </mixPort>
                 <mixPort name="voip_tx" role="sink"
                          flags="AUDIO_INPUT_FLAG_VOIP_TX">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000,16000,32000,48000" channelMasks="AUDIO_CHANNEL_IN_MONO"/>
                 </mixPort>
-                <mixPort name="usb_surround_sound" role="sink" maxOpenCount="2" maxActiveCount="2">
+                <mixPort name="usb_surround_sound" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,88200,96000,176400,192000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK,AUDIO_CHANNEL_INDEX_MASK_3,AUDIO_CHANNEL_INDEX_MASK_4,AUDIO_CHANNEL_IN_5POINT1,AUDIO_CHANNEL_INDEX_MASK_6,AUDIO_CHANNEL_IN_7POINT1,AUDIO_CHANNEL_INDEX_MASK_8"/>
@@ -209,11 +203,11 @@
                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK,AUDIO_CHANNEL_INDEX_MASK_3"/>
                 </mixPort>
                 <mixPort name="hifi_input" role="sink" />
-                <mixPort name="fast input" role="sink" maxOpenCount="2" maxActiveCount="2"
+                <mixPort name="fast input" role="sink"
                          flags="AUDIO_INPUT_FLAG_FAST">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK"/>
+                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                              samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
+                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK"/>
                 </mixPort>
                 <mixPort name="quad mic" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
@@ -334,39 +328,37 @@
             <!-- route declaration, i.e. list all available sources for a given sink -->
             <routes>
                 <route type="mix" sink="Earpiece"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
                 <route type="mix" sink="Speaker"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
                 <route type="mix" sink="Wired Headset"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
                 <route type="mix" sink="Wired Headphones"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
                 <route type="mix" sink="Line"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
                 <route type="mix" sink="HDMI"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,compress_passthrough,voip_rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,compress_passthrough,voip_rx"/>
                 <route type="mix" sink="Proxy"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload"/>
                 <route type="mix" sink="FM"
                        sources="primary output"/>
                 <route type="mix" sink="BT SCO"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT SCO Headset"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT SCO Car Kit"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
                 <route type="mix" sink="USB Device Out"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,hifi_playback"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,hifi_playback"/>
                 <route type="mix" sink="USB Headset Out"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,hifi_playback"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,hifi_playback"/>
                 <route type="mix" sink="Telephony Tx"
                        sources="voice_tx,incall_music_uplink"/>
                 <route type="mix" sink="voice_rx"
                        sources="Telephony Rx"/>
                 <route type="mix" sink="primary input"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,FM Tuner,Telephony Rx"/>
-                <route type="mix" sink="uplink downlink input"
-                       sources="Wired Headset Mic,BT SCO Headset Mic,FM Tuner,USB Device In,USB Headset In,Telephony Rx"/>
                 <route type="mix" sink="usb_surround_sound"
                        sources="USB Device In,USB Headset In"/>
                 <route type="mix" sink="voip_tx"
@@ -393,7 +385,6 @@
         <!-- A2DP Audio HAL -->
         <module name="a2dp" halVersion="2.0">
             <mixPorts>
-                <mixPort name="a2dp output" role="source"/>
                 <mixPort name="a2dp input" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="44100,48000" channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
@@ -401,21 +392,6 @@
             </mixPorts>
 
             <devicePorts>
-                <devicePort tagName="BT A2DP Out" type="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP" role="sink" address="lhdc_a2dp">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                            samplingRates="44100,48000,96000"
-                            channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
-                </devicePort>
-                <devicePort tagName="BT A2DP Headphones" type="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES" role="sink" address="lhdc_a2dp">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                            samplingRates="44100,48000,96000"
-                            channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
-                </devicePort>
-                <devicePort tagName="BT A2DP Speaker" type="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER" role="sink" address="lhdc_a2dp">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                            samplingRates="44100,48000,96000"
-                            channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
-                </devicePort>
                 <devicePort tagName="BT A2DP In" type="AUDIO_DEVICE_IN_BLUETOOTH_A2DP" role="source">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="44100,48000" channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
@@ -423,12 +399,6 @@
             </devicePorts>
 
             <routes>
-                <route type="mix" sink="BT A2DP Out"
-                        sources="a2dp output"/>
-                <route type="mix" sink="BT A2DP Headphones"
-                        sources="a2dp output"/>
-                <route type="mix" sink="BT A2DP Speaker"
-                        sources="a2dp output"/>
                 <route type="mix" sink="a2dp input"
                        sources="BT A2DP In"/>
             </routes>
