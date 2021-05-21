@@ -19,6 +19,7 @@
 # Power Supply
 /sys/devices/platform/soc/990000.i2c/i2c-2/2-0066(/.*)?    u:object_r:sysfs_battery_supply:s0
 /sys/devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify(/.*)?           u:object_r:sysfs_battery_supply:s0
+/sys/devices/soc/[a-f0-9]+.ssusb/power_supply/usb(/.*)?             u:object_r:sysfs_usb_supply:s0
 
 # Vendor overlay
 /(product|system/product)/vendor_overlay/[0-9]+/etc(/.*)?                  u:object_r:vendor_configs_file:s0
