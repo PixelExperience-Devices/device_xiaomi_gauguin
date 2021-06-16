@@ -14,9 +14,6 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "LightService"
-
-#include <log/log.h>
 
 #include "Light.h"
 
@@ -37,7 +34,7 @@ static void set(std::string path, std::string value) {
     std::ofstream file(path);
 
     if (!file.is_open()) {
-        ALOGW("failed to write %s to %s", value.c_str(), path.c_str());
+        LOG(WARNING) << "failed to write " << value.c_str() << " to " << path.c_str();
         return;
     }
 
@@ -53,7 +50,7 @@ static int get(std::string path) {
     int value;
 
     if (!file.is_open()) {
-    ALOGW("failed to read from %s", path.c_str());
+        LOG(WARNING) << "failed to read from " << path.c_str();
     return 0;
     }
 
@@ -63,11 +60,11 @@ static int get(std::string path) {
 
 static int getMaxBrightness(std::string path) {
     int value = get(path);
-    ALOGW("Got max brightness %d", value);
+        LOG(WARNING) << "Got max brightness" << value;
     return value;
 }
 
-static uint32_t getBrightness(const LightState& state) {
+static uint32_t getBrightness(const HwLightState& state) {
     uint32_t alpha, red, green, blue;
 
     /*
@@ -94,16 +91,16 @@ static inline uint32_t scaleBrightness(uint32_t brightness, uint32_t maxBrightne
     return brightness * maxBrightness / 0xFF;
 }
 
-static inline uint32_t getScaledBrightness(const LightState& state, uint32_t maxBrightness) {
+static inline uint32_t getScaledBrightness(const HwLightState& state, uint32_t maxBrightness) {
     return scaleBrightness(getBrightness(state), maxBrightness);
 }
 
-static void handleBacklight(const LightState& state) {
+static void handleBacklight(const HwLightState& state) {
     uint32_t brightness = getScaledBrightness(state, getMaxBrightness(LCD_LED MAX_BRIGHTNESS));
     set(LCD_LED BRIGHTNESS, brightness);
 }
 
-static void handleNotification(const LightState& state) {
+static void handleNotification(const HwLightState& state) {
     uint32_t whiteBrightness = getScaledBrightness(state, getMaxBrightness(WHITE_LED MAX_BRIGHTNESS));
     /* Disable breathing */
     set(WHITE_LED BREATH, 0);
@@ -127,68 +124,45 @@ static inline bool isLit(const LightState& state) {
 }
 
 /* Keep sorted in the order of importance. */
-static std::vector<LightBackend> backends = {
-    { Type::ATTENTION, handleNotification },
-    { Type::NOTIFICATIONS, handleNotification },
-    { Type::BATTERY, handleNotification },
-    { Type::BACKLIGHT, handleBacklight },
+static std::vector<LightType> backends = {
+    LightType::BACKLIGHT,
+    LightType::NOTIFICATIONS,
 };
 
 }  // anonymous namespace
 
+namespace aidl {
 namespace android {
 namespace hardware {
 namespace light {
-namespace V2_0 {
-namespace implementation {
-
-Return<Status> Light::setLight(Type type, const LightState& state) {
-    LightStateHandler handler = nullptr;
-
-    /* Lock global mutex until light state is updated. */
-    std::lock_guard<std::mutex> lock(globalLock);
-
-    /* Update the cached state value for the current type. */
-    for (LightBackend& backend : backends) {
-        if (backend.type == type) {
-            backend.state = state;
-            handler = backend.handler;
-        }
+ndk::ScopedAStatus Lights::setLightState(int id, const HwLightState& state) {
+    switch(id) {
+        case (int) LightType::BACKLIGHT:
+            handleBacklight(state);
+            return ndk::ScopedAStatus::ok();
+        default:
+            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     }
 
-    /* If no handler has been found, then the type is not supported. */
-    if (!handler) {
-        return Status::LIGHT_NOT_SUPPORTED;
-    }
-
-    /* Light up the type with the highest priority that matches the current handler. */
-    for (LightBackend& backend : backends) {
-        if (handler == backend.handler && isLit(backend.state)) {
-            handler(backend.state);
-            return Status::SUCCESS;
-        }
-    }
-
-    /* If no type has been lit up, then turn off the hardware. */
-    handler(state);
-
-    return Status::SUCCESS;
 }
 
-Return<void> Light::getSupportedTypes(getSupportedTypes_cb _hidl_cb) {
-    std::vector<Type> types;
+ndk::ScopedAStatus Lights::getLights(std::vector<HwLight>* lights) {
+    int i = 0;
 
-    for (const LightBackend& backend : backends) {
-        types.push_back(backend.type);
+    for (const LightType& backend : backends) {
+        HwLight hwLight;
+        hwLight.id = (int) backend;
+        hwLight.type = backend;
+        hwLight.ordinal = i;
+        lights->push_back(hwLight);
+        i++;
     }
 
-    _hidl_cb(types);
-
-    return Void();
+    return ndk::ScopedAStatus::ok();
 }
 
-}  // namespace implementation
-}  // namespace V2_0
+
 }  // namespace light
 }  // namespace hardware
 }  // namespace android
+}  // namespace aidl
