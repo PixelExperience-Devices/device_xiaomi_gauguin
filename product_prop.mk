@@ -37,11 +37,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.low_ram=false \
     ro.lmk.log_stats=true
 
-# LMKD
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.low_ram=false \
-    ro.lmk.log_stats=true
-
 # Priv-app permission
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
