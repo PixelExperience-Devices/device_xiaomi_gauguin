@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from gauguin-user 11 RKQ1.200826.002 V12.5.2.0.RJSCNXM
+# All unpinned blobs below are extracted from gauguinpro-user 11 RKQ1.200826.002 V12.5.3.0.RJSCNXM
 
 # ADSP Modules
 system_ext/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
