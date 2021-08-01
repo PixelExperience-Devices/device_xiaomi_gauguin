@@ -18,6 +18,7 @@ type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_kgsl, sysfs_type, fs_type;
 type sysfs_memory, sysfs_type, fs_type;
 type sysfs_usb_supply, sysfs_type, fs_type;
+type touchfeature_device, dev_type;
 
 # vendor
 type vendor_capabilityconfigstore_data_file, file_type, data_file_type;
