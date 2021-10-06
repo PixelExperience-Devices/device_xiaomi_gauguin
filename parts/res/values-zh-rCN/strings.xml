@@ -15,6 +15,9 @@
      limitations under the License.
 -->
 <resources>
+     <!-- Ambient settings -->
+    <string name="ambient_enable">启用环境显示</string>
+
     <!-- Thermal profiles -->
     <string name="thermal_title">温控配置文件</string>
     <string name="thermal_summary">调整每个应用的温控配置文件以获得最佳性能</string>
@@ -26,6 +29,7 @@
     <string name="thermal_gaming">游戏</string>
 
     <!-- Dirac settings -->
+    <string name="dirac_enable">启用米音</string>
     <string name="dirac_title">米音</string>
     <string name="dirac_summary">使用米音和 Hi-Fi 来优化音质</string>
     <string name="dirac_headset_title">耳机类型</string>

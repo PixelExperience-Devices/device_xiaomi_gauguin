@@ -15,6 +15,8 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Ambient settings -->
+    <string name="ambient_enable">Use ambient display</string>
 
     <!-- Thermal profiles -->
     <string name="thermal_title">Thermal profiles</string>
@@ -27,6 +29,7 @@
     <string name="thermal_gaming">Gaming</string>
 
     <!-- Dirac settings -->
+    <string name="dirac_enable">Enable dirac</string>
     <string name="dirac_title">Dirac sound enhancer</string>
     <string name="dirac_summary">Optimize sound quality with Dirac, Hi-Fi</string>
     <string name="dirac_headset_title">Headset type</string>
