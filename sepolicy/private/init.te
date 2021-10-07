@@ -14,3 +14,4 @@ allow init sysfs_memory:file setattr;
 
 allow init hal_fingerprint:process ptrace;
 allow init debugfs_tracing_debug:dir mounton;
+allow init hal_power_default_exec:file mounton;

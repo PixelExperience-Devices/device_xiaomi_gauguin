@@ -8,6 +8,9 @@ type bt_firmware_file, file_type;
 type firmware_file, file_type;
 type persist_file, file_type;
 
+# hal
+type hal_power_default_exec, exec_type, vendor_file_type, file_type;
+
 # sysfs
 type sysfs_battery_supply, sysfs_type, fs_type;
 type sysfs_device_info, sysfs_type, fs_type;
