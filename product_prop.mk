@@ -50,7 +50,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.data.iwlan.enable=true \
     persist.vendor.ims.disableADBLogs=1 \
     persist.vendor.ims.disableIMSLogs=1 \
-    persist.vendor.radio.report_codec=1
+    persist.vendor.radio.report_codec=1 \
+	persist.sys.fflag.override.settings_provider_model=false
 
 # Telephony
 PRODUCT_PRODUCT_PROPERTIES += \
