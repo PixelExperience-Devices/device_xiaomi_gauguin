@@ -44,10 +44,17 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.radio.NO_STAPA=1 \
+    persist.vendor.data.iwlan.enable=true \
     persist.vendor.ims.disableADBLogs=1 \
-    persist.vendor.ims.disableIMSLogs=1
+    persist.vendor.ims.disableIMSLogs=1 \
+    persist.vendor.radio.report_codec=1
 
 # Telephony
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.telephony.default_network=33,22
+    ro.telephony.default_network=33,22 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1
 
