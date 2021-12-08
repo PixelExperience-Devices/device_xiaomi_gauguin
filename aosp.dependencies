@@ -1,0 +1,12 @@
+[
+  { 
+    "repository"   : "vendor_xiaomi_gauguin",
+    "target_path"  : "vendor/xiaomi/gauguin",
+    "branch"       : "twelve",
+    "remote"       : "pixel-devices-blobs"
+  },
+  {
+    "repository": "android_kernel_xiaomi_gauguin",
+    "target_path": "kernel/xiaomi/gauguin"
+  }
+]
