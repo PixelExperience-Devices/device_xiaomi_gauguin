@@ -5,8 +5,16 @@
     "branch"       : "twelve",
     "remote"       : "pixel-devices-blobs"
   },
+  { 
+    "repository"   : "hardware_xiaomi",
+    "target_path"  : "hardware/xiaomi",
+    "remote"       : "pixel",
+    "branch"       : "twelve"
+  },
   {
-    "repository": "android_kernel_xiaomi_gauguin",
-    "target_path": "kernel/xiaomi/gauguin"
+    "repository"   : "kernel_xiaomi_gauguin",
+    "target_path"  : "kernel/xiaomi/gauguin",
+    "remote"       : "pixel-devices",
+    "branch"       : "twelve"
   }
 ]
