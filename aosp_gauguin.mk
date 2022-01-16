@@ -16,6 +16,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_QUICK_TAP := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_gauguin
