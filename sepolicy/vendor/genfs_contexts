@@ -74,3 +74,12 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.q
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm8150l@4:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup/wakeup28 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/wakeup/wakeup14 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/988000.i2c/i2c-1/1-0028/wakeup/wakeup32 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-2/2-0034/990000.i2c:qcom,smb1396@34:qcom,div2_cp/wakeup/wakeup63 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup33 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup/wakeup27 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/884000.qcom,qup_uart/wakeup/wakeup23 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-2/2-005a/wakeup/wakeup31 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/input/input4/wakeup68 u:object_r:sysfs_wakeup:s0
