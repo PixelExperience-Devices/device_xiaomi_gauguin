@@ -27,6 +27,7 @@ void load_gauguin() {
     property_override("ro.product.brand", "Xiaomi");
     property_override("ro.product.device", "gauguin");
     property_override("ro.product.model", "M2007J17G");
+    property_override("ro.product.marketname", "Mi 10T Lite");
     property_override("ro.boot.product.hardware.sku", "nfc");
 }
 
@@ -35,6 +36,7 @@ void load_gauguinpro() {
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "gauguinpro");
     property_override("ro.product.model", "M2007J17C");
+    property_override("ro.product.marketname", "Redmi Note 9 Pro");
     property_override("ro.boot.product.hardware.sku", "nfc");
 }
 
@@ -43,6 +45,7 @@ void load_gauguininpro() {
     property_override("ro.product.brand", "Xiaomi");
     property_override("ro.product.device", "gauguininpro");
     property_override("ro.product.model", "M2007J17I");
+    property_override("ro.product.marketname", "Mi 10i");
 }
 
 void vendor_load_properties() {
