@@ -2,7 +2,7 @@
   { 
     "repository"   : "vendor_xiaomi_gauguin",
     "target_path"  : "vendor/xiaomi/gauguin",
-    "branch"       : "twelve",
+    "branch"       : "twelve-wip",
     "remote"       : "pixel-devices-blobs"
   },
   {
