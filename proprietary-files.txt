@@ -429,44 +429,6 @@ vendor/lib64/libxmi_hdr_checker.so
 vendor/lib64/libxmi_high_dynamic_range.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|aabcddc3af932023f64d51196a97dc11cf8ac3b2
 
-# Camera (Prebuilt) - from V13.0.3.0.SJSCNXM
-vendor/bin/hw/android.hardware.camera.provider@2.4-service_64|d75fbf981881b05a9c35dec0937dd949d69a2eae
-vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc|4a4b60d5843469cfa172849a74998723cc1bfd5c
-vendor/lib/android.hardware.camera.provider@2.4-external.so|db124cce49bb357cc8a8a6e41a189c817aae90ca
-vendor/lib/android.hardware.camera.provider@2.4-legacy.so|f53d64654359a04c40f69640d16bf7210d2ef495
-vendor/lib/camera.device@1.0-impl.so|7200a0c6276be52e0f893c4467b1e1d2b2d8e21a
-vendor/lib/camera.device@3.2-impl.so|38a54906f50340e325217415a24e67572ab01a18
-vendor/lib/camera.device@3.3-impl.so|86c04bb8b6bf6815788c2c774f81c570324f6dda
-vendor/lib/camera.device@3.4-external-impl.so|5f44915708b9b7a1fde4396842897b3d9ef833ac
-vendor/lib/camera.device@3.4-impl.so|9b2445f403165c955a74989a01b3b6756eb49c73
-vendor/lib/camera.device@3.5-external-impl.so|16e81014549a567ec469cf6ba1d9501079612fd8
-vendor/lib/camera.device@3.5-impl.so|15bf890c9b0743308e027e3bde4e549cc0b6c5ab
-vendor/lib/camera.device@3.6-external-impl.so|df380aa959a7c8a7dff939a653653e59f5b7c075
-vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so|821c16e852fd10813077e8bf356a1069d96fc19b
-vendor/lib/libcamera2ndk_vendor.so|7c5ed6ea441709ee6744fba3de638ddd0ad54cbc
-vendor/lib/libgui_vendor.so|bf7529def47cdcc6a5e74c6e97df5165eb568596
-vendor/lib/vendor.qti.hardware.camera.device@1.0.so|8b9cb7985cab10cf15dd15cef257ba8c70c42621
-vendor/lib/vendor.qti.hardware.camera.device@2.0.so|b1588024f1c2de84d336a7e2b7a7ea548c67a053
-vendor/lib/vendor.qti.hardware.camera.device@3.5.so|ca348abb9896fd290b7481d33812a4718ac5bc3e
-vendor/lib64/android.hardware.camera.provider@2.4-external.so|72adbe24694e85af2a0b93fdc099c166dc476e20
-vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|6fe030fd1d0d9d028d59c8b8618067ecfe5c9151
-vendor/lib64/camera.device@1.0-impl.so|a2f5b90a5241799e3fbac147e59db4157bc89766
-vendor/lib64/camera.device@3.2-impl.so|2cde05df6c6daa056d8f37ae79a03e62f596531a
-vendor/lib64/camera.device@3.3-impl.so|a9e4f7f78272f7581eef053d5fe38e2e38ca322f
-vendor/lib64/camera.device@3.4-external-impl.so|e0862496be5fc579c8be4cb305559af06cbeefb0
-vendor/lib64/camera.device@3.4-impl.so|020e79fa8b3594b35cfdc0301660ff3fe558e3c9
-vendor/lib64/camera.device@3.5-external-impl.so|448f4271d6866cac3254bd07299641100a0bcec3
-vendor/lib64/camera.device@3.5-impl.so|ec1c1c30a9c89c79e6a0741db7a8ae783eeb1974
-vendor/lib64/camera.device@3.6-external-impl.so|8e7da3b5ddaaf35dc33fc69f09a92ecde10355ea
-vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so|ef02d77e6a2c14fefbdf4093092a07061dc9ce9b
-vendor/lib64/libcamera2ndk_vendor.so|3b3af7f51d032b08b6cad90bd473ffadee30038a
-vendor/lib64/libdng_sdk2vendor.so|df7487d013c78b7c6a77ccd9be10fa8e115ed7c8
-vendor/lib64/libgui_vendor.so|ee1eb26656acda1e096af18b2b46d912f0ddfec9
-vendor/lib64/vendor.qti.hardware.camera.device@1.0.so|543310393fa5170c481cd94f55ac65c6558d9202
-vendor/lib64/vendor.qti.hardware.camera.device@2.0.so|c22277198a5fdd7e4b7b057ef5068f7edbd3f817
-vendor/lib64/vendor.qti.hardware.camera.device@3.5.so|a054618c3750e90f8ac4a2d5d4069113ffcf7b53
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so|b1b779f34c5741d8bf5d5c488aa3973ef9722039
-
 # Camera (Mi 10T Lite) - from V12.0.2.0.RJSMIXM
 vendor/lib/camera/com.qti.sensormodule.sunny_imx682.bin|8c24261a16ace9652cbfa56cc0662fc49e015017
 vendor/lib/camera/com.qti.tuned.gauguin_sunny_imx682_wide.bin|2e678e9ebaa8f1b7f0ba75e438bc11dd4cbe0f65
